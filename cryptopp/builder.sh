@@ -1,7 +1,7 @@
 #!/bin/bash
 
 XCODE_ROOT=`xcode-select -print-path`
-ARCHS="i386 armv7 armv7s arm64"
+ARCHS="i386 x86_64 armv7 armv7s arm64"
 SDK_VERSION="8.1"
 
 STATIC_ARCHIVES=""
@@ -12,6 +12,10 @@ do
         PLATFORM="iPhoneSimulator"
     else
         PLATFORM="iPhoneOS"
+    fi
+	
+    if [ "${ARCH}" == "x86_64" ]; then
+        PLATFORM="iPhoneSimulator"
     fi
 
     export DEV_ROOT="${XCODE_ROOT}/Platforms/${PLATFORM}.platform/Developer"
