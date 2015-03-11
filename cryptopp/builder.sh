@@ -10,6 +10,8 @@ do
     PLATFORM=""
     if [ "${ARCH}" == "i386" ]; then
         PLATFORM="iPhoneSimulator"
+	elif [ "${ARCH}" == "x86_64" ]; then
+       PLATFORM="iPhoneSimulator"
     else
         PLATFORM="iPhoneOS"
     fi
