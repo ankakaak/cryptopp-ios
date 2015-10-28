@@ -1,7 +1,7 @@
 #!/bin/bash
 
 XCODE_ROOT=`xcode-select -print-path`
-ARCHS="i386 x86_64 armv7 armv7s arm64"
+ARCHS="x86_64 armv7 armv7s arm64"
 SDK_VERSION="8.4"
 
 STATIC_ARCHIVES=""
@@ -17,7 +17,7 @@ do
     fi
 
     export DEV_ROOT="${XCODE_ROOT}/Platforms/${PLATFORM}.platform/Developer"
-    export SDK_ROOT="${DEV_ROOT}/SDKs/${PLATFORM}${SDK_VERSION}.sdk"
+    export SDK_ROOT="${DEV_ROOT}/SDKs/${PLATFORM}.sdk"
     export TOOLCHAIN_ROOT="${XCODE_ROOT}/Toolchains/XcodeDefault.xctoolchain/usr/bin/"
     export CC=clang
     export CXX=clang++

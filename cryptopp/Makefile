@@ -1,4 +1,4 @@
-CXXFLAGS += -g -O2 -Wall -Wno-unused -Wno-unknown-pragmas -DNDEBUG -DCRYPTOPP_DISABLE_ASM -DCRYPTOPP_DISABLE_SSE2 -MMD -MT dependencies
+CXXFLAGS += -g -O2 -Wall -Wno-unused -Wno-unknown-pragmas -DNDEBUG -DCRYPTOPP_DISABLE_ASM -DCRYPTOPP_DISABLE_SSE2 -MMD -MT dependencies -miphoneos-version-min=9
 
 TARGET = libcryptopp.a
 SRCS = $(shell echo *.cpp)
