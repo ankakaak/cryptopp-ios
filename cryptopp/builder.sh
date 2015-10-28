@@ -2,7 +2,7 @@
 
 XCODE_ROOT=`xcode-select -print-path`
 ARCHS="x86_64 armv7 armv7s arm64"
-SDK_VERSION="8.4"
+SDK_VERSION="9.0"
 
 STATIC_ARCHIVES=""
 for ARCH in ${ARCHS}
